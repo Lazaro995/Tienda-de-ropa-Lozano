@@ -9,15 +9,16 @@ export default function ItemListContainer({ greeting }) {
 
 
     let products = [{ id: 1, title: "Pashmina azul", price: 1500 }, { id: 2, title: "pashmina blanca", price: 1500 }];
-    const promise = new promise((resolve, reject) => {
+    new Promise((resolve, reject) => {
 
       setTimeout(() => {
         resolve(products);
       }, 4000)
 
-    }).then((data) => {
-      setItems(data);
-    }).catch().finally(() => { setLoading(false) })
+    })
+      .then((data) => {
+        setItems(data);
+      }).catch().finally(() => { setLoading(false) })
   }, [])
 
   return (
