@@ -11,12 +11,12 @@ export const Contador = ({ stock, initial = 1, onAdd }) => {
     }
 
 
-return (
-    <>
-        <button onClick={disminuirContador}>-</button>
-        <span>{contador}</span>
-        <button onClick={aumentarContador}>+</button>
-        <div><button disable ={contador === 0} onClick={()=>{onAdd(contador)}}>Agregar al carrito</button></div>
-    </>
-);
+    return (
+        <>
+            <button onClick={disminuirContador}>-</button>
+            <span>{contador}</span>
+            <button onClick={aumentarContador}>+</button>
+            <div><button disable={contador === 0} onClick={() => { onAdd(contador) }}>Agregar al carrito</button></div>
+        </>
+    );
 }

@@ -3,7 +3,7 @@ import ItemListContainer from './Components/ItemListContainer/ItemListContainer'
 import NavBar from './Components/NavBar/NavBar';
 import { Contador } from './Components/Contador/Contador';
 import {ItemDetailContainer} from './Components/ItemDetailContainer/ItemDetailContainer';
-
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 function App() {
   const onAdd = (contador) => {
     console.log("Soy onAdd y el valor del contador es:", contador)
